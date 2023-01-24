@@ -1,5 +1,6 @@
 /**
  * Mobile Apps Project 1 - Noopur S. Bhatt
+ * Created application that stores user name and count in firebase
  * https://github.com/facebook/react-native
  *
  * @format
@@ -72,6 +73,7 @@ const App = () => {
         style={backgroundStyle}>
         <View>
           <TextInput
+            // this text input will store the name in firebase
             placeholder="Enter Name"
             onChangeText={val => setName(val)}
           />
@@ -94,6 +96,7 @@ const App = () => {
         </View>
         <View>
           <Button
+            // this button will add 1 to the count and store it in firebase
             title="Add Count"
             onPress={async () => {
               setCount(count + 1);
@@ -111,6 +114,7 @@ const App = () => {
   );
 };
 
+// current style for prelim app
 const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 400,
