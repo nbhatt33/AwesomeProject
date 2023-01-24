@@ -68,12 +68,15 @@ const App = () => {
             title="Add Count"
             onPress={async () => {
               setCount(count + 1);
-              await firestore().collection('users').doc('noobs').set(
-                {
-                  count: count,
-                },
-                {merge: true},
-              );
+              await firestore()
+                .collection('users')
+                .doc('noobs')
+                .set(
+                  {
+                    count: count + 1,
+                  },
+                  {merge: true},
+                );
             }}
           />
         </View>
