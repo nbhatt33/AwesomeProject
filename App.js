@@ -39,7 +39,7 @@ const App = () => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <View>
+        <View style={styles.container}>
           <TextInput
             // this text input will store the name in firebase
             placeholder="Enter Name"
@@ -59,7 +59,7 @@ const App = () => {
             }}
           />
         </View>
-        <View>
+        <View style={styles.container}>
           <Text>{count}</Text>
         </View>
         <View>
@@ -103,6 +103,12 @@ const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700',
   },
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
 });
 
 export default App;
